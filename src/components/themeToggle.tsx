@@ -4,7 +4,7 @@ import * as styles from "./themeToggle.module.scss"
 
 export default function ThemeToggle() {
   const [checked, setChecked] = useState(isSelectedDarkTheme)
-
+  const isBrowser = typeof window !== "undefined"
   const isDarkTheme = useThemeDetector()
 
   useEffect(() => {
@@ -13,6 +13,7 @@ export default function ThemeToggle() {
 
   // Return value based on selected theme
   function isSelectedDarkTheme(): boolean {
+    if (!isBrowser) return false
     let theme = "light"
 
     if (localStorage.getItem("theme")) {
@@ -30,6 +31,7 @@ export default function ThemeToggle() {
 
   function handleCheck(e: React.ChangeEvent<HTMLInputElement>) {
     const isChecked = e.target.checked
+    if (!isBrowser) return
     if (isChecked) {
       setChecked(true)
       localStorage.setItem("theme", "dark")

@@ -34,23 +34,28 @@ const transition = {
 
 export default function Header(props: Props) {
   const [openBurger, setOpenBurger] = useState(false)
+  const isBrowser = typeof window !== "undefined"
 
   // Close burger menu if window is resized
   useEffect(() => {
-    window.addEventListener("resize", registerResize)
-    return () => {
-      window.removeEventListener("resize", registerResize)
-    }
-    function registerResize() {
-      setOpenBurger(false)
+    if (isBrowser) {
+      window.addEventListener("resize", registerResize)
+      return () => {
+        window.removeEventListener("resize", registerResize)
+      }
+      function registerResize() {
+        setOpenBurger(false)
+      }
     }
   }, [])
 
   useEffect(() => {
-    if (openBurger) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
+    if (isBrowser) {
+      if (openBurger) {
+        document.body.style.overflow = "hidden"
+      } else {
+        document.body.style.overflow = "auto"
+      }
     }
   }, [openBurger])
 
