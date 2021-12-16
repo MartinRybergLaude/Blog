@@ -14,7 +14,10 @@ function Layout(props: Props) {
   const isDarkTheme = useThemeDetector()
 
   useEffect(() => {
-    applyCorrectTheme()
+    const isBrowser = typeof window !== "undefined"
+    if (isBrowser) {
+      applyCorrectTheme()
+    }
   }, [isDarkTheme])
 
   function applyCorrectTheme() {
