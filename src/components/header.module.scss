@@ -46,7 +46,7 @@
   font-size: var(--fontSize-2);
 }
 .linkActive {
-  background: var(--color-light);
+  background: none;
 }
 .burgerMenu {
   padding: 8px;
@@ -78,6 +78,9 @@
     width: auto;
     flex-direction: row;
     gap: 16px;
+  }
+  .linkActive {
+    background: var(--color-light);
   }
   .burgerMenu {
     display: none;
