@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  height: 48px;
+  width: 48px;
+}
+.container input {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  opacity: 0.00001;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.sun,
+.moon {
+  transition: 200ms ease-in-out all;
+}
+.container svg {
+  width: 48px;
+  height: 48px;
+  .checkboxBg {
+    fill: var(--color-light);
+  }
+  .sun {
+    opacity: 0;
+    stroke: var(--color-heading-black);
+  }
+  .moon {
+    transform: rotate(90deg);
+    stroke: var(--color-heading-black);
+  }
+}
+.container input:checked + svg {
+  .sun {
+    opacity: 1;
+  }
+  .moon {
+    opacity: 0;
+  }
+}
+.container input:focus + svg {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+.container input:focus:not(:focus-visible) + svg {
+  outline: none;
+}

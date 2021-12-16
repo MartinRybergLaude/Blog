@@ -1,0 +1,23 @@
+.wrapper {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 4rem 1rem;
+  border-top: 2px solid var(--color-light);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.random {
+  margin: 0 auto;
+}
+
+.copyright {
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.rights {
+  margin: 0 auto;
+  font-style: italic;
+}

@@ -1,0 +1,29 @@
+.container {
+  border-bottom: 2px solid var(--color-light);
+  padding-bottom: 16px;
+  margin-bottom: 0;
+  margin-top: 16px;
+  transition: 200ms transform;
+  &:last-of-type {
+    border: none;
+  }
+  &:first-of-type {
+    margin-top: 32px;
+  }
+  &:hover {
+    transform: translateX(-4px);
+  }
+  h3 {
+    font-size: var(--fontSize-2);
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  time {
+    font-weight: var(--fontWeight-semibold);
+    color: var(--color-text-light);
+    font-size: var(--fontSize-1);
+  }
+}
+.link {
+  text-decoration: none;
+}
