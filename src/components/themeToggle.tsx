@@ -3,16 +3,16 @@ import { useThemeDetector } from "../utils"
 import * as styles from "./themeToggle.module.scss"
 
 export default function ThemeToggle() {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(isSelectedDarkTheme)
 
   const isDarkTheme = useThemeDetector()
 
   useEffect(() => {
-    applyCorrectTheme()
+    setChecked(isSelectedDarkTheme)
   }, [isDarkTheme])
 
-  // Set initial value based on current theme
-  function applyCorrectTheme() {
+  // Return value based on selected theme
+  function isSelectedDarkTheme(): boolean {
     let theme = "light"
 
     if (localStorage.getItem("theme")) {
@@ -23,10 +23,9 @@ export default function ThemeToggle() {
       theme = "dark"
     }
     if (theme === "dark") {
-      setChecked(true)
-    } else {
-      setChecked(false)
+      return true
     }
+    return false
   }
 
   function handleCheck(e: React.ChangeEvent<HTMLInputElement>) {

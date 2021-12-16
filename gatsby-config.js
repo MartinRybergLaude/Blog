@@ -9,10 +9,10 @@ module.exports = {
     title: `Martin R. L.`,
     author: {
       name: `Martin R. Laude`,
-      summary: `based in Stockholm and develops cool things.`,
+      summary: `based in Stockholm developing cool things.`,
     },
     description: `Personal site and blog of Martin Ryberg Laude`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://mrlaude.com/`,
     social: {
       twitter: `martini_rl`,
     },
@@ -59,15 +59,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Martin R. L.'s site`,
+        short_name: `Martin R. L.`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -105,7 +105,7 @@ export default function Header(props: Props) {
           )}
         </AnimatePresence>
       </button>
-      <nav className={styles.navLinks}>
+      <nav>
         <AnimatePresence initial={false}>
           {openBurger && (
             <motion.ul
