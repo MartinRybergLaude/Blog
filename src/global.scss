@@ -246,11 +246,12 @@ table thead tr th {
 
 img {
   width: 100%;
+  transition: 0ms ease border;
 }
-img + p em {
+img + em {
   text-align: center;
   display: block;
-  margin-top: -16px;
+  margin-top: 8px;
 }
 address {
   font-style: normal;
