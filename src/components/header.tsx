@@ -125,6 +125,7 @@ export default function Header(props: Props) {
                 <Link
                   className={styles.link + " " + getActiveString("home")}
                   to={"/"}
+                  onClick={() => setOpenBurger(false)}
                 >
                   Home
                 </Link>
@@ -133,6 +134,7 @@ export default function Header(props: Props) {
                 <Link
                   className={styles.link + " " + getActiveString("blog")}
                   to={"/blog"}
+                  onClick={() => setOpenBurger(false)}
                 >
                   Blog
                 </Link>
@@ -141,6 +143,7 @@ export default function Header(props: Props) {
                 <Link
                   className={styles.link + " " + getActiveString("work")}
                   to={"/work"}
+                  onClick={() => setOpenBurger(false)}
                 >
                   Work
                 </Link>
@@ -149,6 +152,7 @@ export default function Header(props: Props) {
                 <Link
                   className={styles.link + " " + getActiveString("about")}
                   to={"/about"}
+                  onClick={() => setOpenBurger(false)}
                 >
                   About
                 </Link>
@@ -157,6 +161,7 @@ export default function Header(props: Props) {
                 <Link
                   className={styles.link + " " + getActiveString("contact")}
                   to={"/contact"}
+                  onClick={() => setOpenBurger(false)}
                 >
                   Contact
                 </Link>
