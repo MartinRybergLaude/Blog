@@ -32,15 +32,15 @@ export default function ThemeToggle() {
   function handleCheck(e: React.ChangeEvent<HTMLInputElement>) {
     const isBrowser = typeof window !== "undefined"
     const isChecked = e.target.checked
-    if (!isBrowser) return
+    if (!isBrowser || !localStorage) return
     if (isChecked) {
-      setChecked(true)
       localStorage.setItem("theme", "dark")
       document.documentElement.setAttribute("data-theme", "dark")
+      setChecked(true)
     } else {
-      setChecked(false)
       localStorage.setItem("theme", "light")
       document.documentElement.setAttribute("data-theme", "light")
+      setChecked(false)
     }
   }
 
