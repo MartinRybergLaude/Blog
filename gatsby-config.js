@@ -62,10 +62,10 @@ module.exports = {
         name: `Martin R. L.'s site`,
         short_name: `Martin R. L.`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#f6f8f7`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#f6f8f7`,
         display: `minimal-ui`,
         icon: `src/images/favicon.svg`, // This path is relative to the root of the site.
       },
