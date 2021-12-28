@@ -38,6 +38,7 @@ export default function ThemeToggle() {
       document.documentElement.setAttribute("data-theme", "dark")
       setChecked(true)
     } else {
+      console.log("Checked to light")
       localStorage.setItem("theme", "light")
       document.documentElement.setAttribute("data-theme", "light")
       setChecked(false)
