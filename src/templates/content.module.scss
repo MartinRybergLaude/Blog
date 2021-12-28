@@ -3,6 +3,7 @@
   margin-bottom: 32px;
   margin-top: -32px;
   padding-bottom: 16px;
+  overflow-x: hidden;
   .img {
     border-radius: 12px;
     margin-top: 64px;
@@ -21,6 +22,8 @@
   align-items: flex-end;
   flex-wrap: wrap;
   column-gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 .headerInfo p {
   flex-shrink: 0;
