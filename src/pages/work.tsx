@@ -35,7 +35,7 @@ export default function Work({ data }) {
 }
 export const pageQuery = graphql`
   query {
-    allContentfulProject {
+    allContentfulProject(sort: { fields: [year], order: DESC }) {
       nodes {
         slug
         title
