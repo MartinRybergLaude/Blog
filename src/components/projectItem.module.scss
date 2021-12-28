@@ -32,6 +32,9 @@ $radius: 12px;
     border-radius: $radius;
   }
 }
+.liveLinkWrapper {
+  overflow-x: auto;
+}
 .liveLink {
   text-decoration: none;
   margin: 0 16px;
@@ -41,7 +44,7 @@ $radius: 12px;
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   svg {
     padding-top: 1px;
     width: 28px;

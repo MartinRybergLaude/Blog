@@ -31,7 +31,7 @@ export default function ProjectItem(props: Props) {
           </section>
         </Link>
         {props.liveLink && (
-          <div style={{ overflowX: "scroll", paddingBottom: "8px" }}>
+          <div className={styles.liveLinkWrapper}>
             <a className={styles.liveLink} href={props.liveLink}>
               {"Visit " + liveLink}
               <svg
