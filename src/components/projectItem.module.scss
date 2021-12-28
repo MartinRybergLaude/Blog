@@ -2,6 +2,7 @@ $radius: 12px;
 .container {
   margin-bottom: 48px;
   border-radius: $radius;
+  overflow-x: hidden;
   h2 {
     font-size: var(--fontSize-3);
     margin: 24px 16px 4px 16px;
@@ -39,6 +40,8 @@ $radius: 12px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
+  overflow-x: scroll;
   svg {
     padding-top: 1px;
     width: 28px;

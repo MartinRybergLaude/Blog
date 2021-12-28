@@ -29,11 +29,10 @@ export default function ThemeToggle() {
     return false
   }
 
-  function handleCheck(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleCheck() {
     const isBrowser = typeof window !== "undefined"
-    const isChecked = e.target.checked
-    if (!isBrowser || !localStorage) return
-    if (isChecked) {
+    if (!isBrowser) return
+    if (!checked) {
       localStorage.setItem("theme", "dark")
       document.documentElement.setAttribute("data-theme", "dark")
       setChecked(true)
@@ -44,13 +43,18 @@ export default function ThemeToggle() {
     }
   }
 
+  function controlledComponentWorkAround() {
+    return
+  }
+
   return (
     <div className={styles.container}>
       <input
         aria-label="dark mode on"
         type="checkbox"
         checked={checked}
-        onChange={handleCheck}
+        onClick={() => handleCheck()}
+        onChange={() => controlledComponentWorkAround()}
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
