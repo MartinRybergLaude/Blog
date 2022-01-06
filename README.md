@@ -2,7 +2,7 @@
   Personal site 💻
 </h1>
 <p align="center">
-  My personal site with a blog
+  My personal site with a blog, live @ [mrlaude.com](https://mrlaude.com)
 </p>
 
 ## 📄 Prerequisites
