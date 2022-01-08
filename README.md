@@ -5,6 +5,9 @@
   My personal site with a blog, live @ <a href="https://mrlaude.com">mrlaude.com</a>
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6d4c287-70bc-4000-916d-54ba19cf5364/deploy-status)](https://app.netlify.com/sites/mrlaude/deploys)
+
+
 ## 📄 Prerequisites
 
 - NodeJS
