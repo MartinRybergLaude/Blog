@@ -30,7 +30,7 @@
 
     ```shell
     cd Blog
-    npm install
+    yarn
     ```
 
 3.  **Start the app**
@@ -38,7 +38,7 @@
     Start the app on `http://localhost:8000`
 
     ```shell
-    npm start
+    yarn start
     ```
 
 ## 🧐 Technologies
