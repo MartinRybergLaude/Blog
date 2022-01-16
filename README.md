@@ -7,11 +7,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b6d4c287-70bc-4000-916d-54ba19cf5364/deploy-status)](https://app.netlify.com/sites/mrlaude/deploys)
 
+## 💡 Introduction
 
-## 📄 Prerequisites
+This site is used as my personal site and includes a blog and project case studies. It's built using [GatsbyJS](https://www.gatsbyjs.com/) with typescript and [Contentful](https://www.contentful.com/) as content management system, otherwise employing an accessible out-of-the-way design. Follow the steps below to run your own version.
+
+## ✅ Prerequisites
 
 - NodeJS
-- npm
+- Yarn
+- A Contentful space with correct [content types](https://github.com/MartinRybergLaude/Blog/wiki/Contentful-content-types)
 
 ## 🚀 Quick start
 
@@ -24,9 +28,23 @@
     git clone https://github.com/MartinRybergLaude/Blog.git
     ```
 
+3.  **Implement Contentful content types**
+
+    On your Contentful page, add the content types required to serve content to the site. Schemas for the content models to import can be found [here](https://github.com/MartinRybergLaude/Blog/wiki/Contentful-content-types).
+
+
 2.  **Install**
 
-    Open cmd, terminal or powershell in the cloned direcory and install
+    Create a .env file in the root folder, and add these:
+
+    ```shell
+    # Replace YourContentfulSpaceID and YourContentfulAccessToken with your own space ID and access token
+
+    CONTENTFUL_SPACE_ID=YourContentfulSpaceID
+    CONTENTFUL_ACCESS_TOKEN=YourContentfulAccessToken
+    ```
+  
+    Open cmd, terminal or powershell in the cloned direcory and install dependencies:
 
     ```shell
     cd Blog
