@@ -2,16 +2,12 @@ const dotenv = require('dotenv')
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
-
 }
+
 module.exports = {
   siteMetadata: {
-    title: `Martin R. L.`,
-    author: {
-      name: `Martin R. Laude`,
-      summary: `based in Stockholm developing cool things.`,
-    },
-    description: `Personal site and blog of Martin Ryberg Laude`,
+    title: `Martin Ryberg Laude`,
+    description: `Frontend developer & designer creating cool stuff.`,
     siteUrl: `https://mrlaude.com/`,
     social: {
       twitter: `martini_rl`,
@@ -59,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Martin R. L.'s site`,
+        name: `Martin Ryberg Laude's site`,
         short_name: `Martin R. L.`,
         start_url: `/`,
         background_color: `#f6f8f7`,

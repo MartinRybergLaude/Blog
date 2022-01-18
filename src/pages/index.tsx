@@ -8,7 +8,10 @@ export default function Index({ data }) {
   const posts = data.allContentfulBlogPost.nodes
   return (
     <Layout title="Hi! I'm Martin 👋" tag="home">
-      <Seo title="Home" />
+      <Seo
+        title="Martin Ryberg Laude — Frontend Developer & Designer"
+        isIndex
+      />
 
       <p className="desc">
         I design & develop websites, and you're currently visiting my personal
