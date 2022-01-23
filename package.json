@@ -8,6 +8,8 @@
     "url": "https://github.com/MartinRybergLaude/Blog/issues"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^4.5.0",
+    "@fontsource/open-sans": "^4.5.2",
     "dotenv": "^10.0.0",
     "framer-motion": "^5.5.4",
     "gatsby": "^4.2.0",
