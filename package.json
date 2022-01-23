@@ -14,8 +14,6 @@
     "framer-motion": "^5.5.4",
     "gatsby": "^4.2.0",
     "gatsby-plugin-feed": "^4.2.0",
-    "gatsby-plugin-gatsby-cloud": "^4.2.0",
-    "gatsby-plugin-google-analytics": "^4.2.0",
     "gatsby-plugin-image": "^2.3.0",
     "gatsby-plugin-manifest": "^4.2.0",
     "gatsby-plugin-offline": "^5.2.0",
@@ -38,22 +36,20 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.44.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "sass": "^1.44.0"
   },
   "devDependencies": {
     "prettier": "^2.4.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://mrlaude.com",
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "GPL-3.0",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/MartinRybergLaude/Blog"
   },
   "scripts": {
     "build": "gatsby build",
