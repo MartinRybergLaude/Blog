@@ -1,5 +1,4 @@
 /* CSS Custom Properties Definitions */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 :root {
   --spacing-px: "1px";
   --spacing-0: 0;
@@ -16,8 +15,8 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: "Open Sans", sans-serif;
-  --fontFamily-mono: "JetBrains Mono", monospace;
+  --fontFamily-sans: "Open SansVariable", sans-serif;
+  --fontFamily-mono: "JetBrains MonoVariable", monospace;
   --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -39,11 +38,12 @@
   --fontSize-5: 32px;
   --fontSize-6: 48px;
   --fontSize-7: 64px;
-  --color-primary: #009985;
+  --color-primary: #1d7464;
   --color-primary-rgb: 0, 153, 133;
   --color-text: #000000;
   --color-text-secondary: #3d3d4d;
-  --color-text-light: #748092;
+  --color-text-light: #4b5561;
+  --color-text-cloud: #0f3d36;
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-light: #e6e6e6;
@@ -55,6 +55,7 @@
   --color-text: #ffffff;
   --color-text-secondary: #d8d8e7;
   --color-text-light: #a5b0c2;
+  --color-text-cloud: #c7f0ea;
   --color-heading: #f2f3f6;
   --color-heading-black: white;
   --color-light: #2e313a;
@@ -228,6 +229,7 @@ blockquote > ol {
 }
 
 blockquote p {
+  color: var(--color-text-cloud);
   padding: 16px;
   font-style: normal;
   font-size: var(--fontSize-2);
@@ -342,6 +344,7 @@ a:focus {
   }
   p {
     margin: 16px 0 0 0;
+    color: var(--color-text-cloud);
   }
 }
 .markdown-body {
@@ -349,7 +352,7 @@ a:focus {
   ol {
     width: 100%;
     padding: 32px;
-    background: var(--color-light);
+    border: 1px solid var(--color-text-light);
     border-radius: 8px;
     li {
       margin-left: var(--spacing-5);

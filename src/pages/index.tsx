@@ -53,7 +53,10 @@ export default function Index({ data }) {
         <p>
           This website is new and currently under active development. Please
           report any issues to{" "}
-          <a href="mailto:martin.ryberg.laude@gmail.com">
+          <a
+            style={{ overflowWrap: "break-word" }}
+            href="mailto:martin.ryberg.laude@gmail.com"
+          >
             martin.ryberg.laude@gmail.com
           </a>
           , that'd be nice :)
