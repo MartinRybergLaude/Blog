@@ -94,12 +94,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-plausible`,
-      options: {
-        domain: `mrlaude.com`,
-      },
-    },
-  ],
+    `gatsby-plugin-sass`
+  ]
 }
