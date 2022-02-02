@@ -55,9 +55,9 @@ export default function Index({ data }) {
           report any issues to{" "}
           <a
             style={{ overflowWrap: "break-word" }}
-            href="mailto:martin.ryberg.laude@gmail.com"
+            href="mailto:contact@mrlaude.com"
           >
-            martin.ryberg.laude@gmail.com
+            contact@mrlaude.com
           </a>
           , that'd be nice :)
         </p>
