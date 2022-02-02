@@ -33,9 +33,9 @@ export default function Index() {
           <a
             className="arrow-link"
             style={{ display: "inline-flex" }}
-            href="mailto:martin.ryberg.laude@gmail.com"
+            href="mailto:contact@mrlaude.com"
           >
-            martin.ryberg.laude@gmail.com
+            contact@mrlaude.com
             <LinkIcon />
           </a>
         </p>
