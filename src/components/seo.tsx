@@ -82,7 +82,14 @@ function Seo(props: Props) {
           content: metaDescription,
         },
       ]}
-    />
+    >
+      <link
+        type="application/rss+xml"
+        rel="alternate"
+        href="/rss.xml"
+        title="Martin's blog feed"
+      />
+    </Helmet>
   )
 }
 
