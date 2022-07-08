@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
 
@@ -118,7 +118,7 @@ module.exports = {
                   title: node.title,
                   description: node.description.description,
                   author: node.author.name,
-                  date: node.publishDate,
+                  date: node.isoDate,
                   url: site.siteMetadata.siteUrl + "/blog/" + node.slug,
                   guid: site.siteMetadata.siteUrl + "/blog/" + node.slug,
                   custom_elements: [{"content:encoded": node.body.childMarkdownRemark.html}]
@@ -127,7 +127,7 @@ module.exports = {
             },
             query: `
               {
-                allContentfulBlogPost {
+                allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
                   edges {
                     node {
                       slug
@@ -144,7 +144,7 @@ module.exports = {
                           html
                         }
                       }
-                      publishDate
+                      isoDate: publishDate(formatString: "YYYY-MM-DD")
                     }
                   }
                 }
