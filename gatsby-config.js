@@ -121,7 +121,7 @@ module.exports = {
                   date: node.isoDate,
                   url: site.siteMetadata.siteUrl + "/blog/" + node.slug,
                   guid: site.siteMetadata.siteUrl + "/blog/" + node.slug,
-                  custom_elements: [{"content:encoded": node.body.childMarkdownRemark.html}]
+                  custom_elements: [{"content:encoded": node.body.childMarkdownRemark.html.replace("//images.ctfassets", "https://images.ctfassets")}]
                 })
               })
             },
@@ -151,7 +151,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Martin's RSS feed",
+            title: "Martin R. L.'s blog",
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;

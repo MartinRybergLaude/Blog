@@ -1,7 +1,6 @@
 const path = require(`path`)
 const readingTime = require('reading-time');
 const { markdownToTxt } = require('markdown-to-txt');
-const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
