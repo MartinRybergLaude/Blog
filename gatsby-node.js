@@ -1,6 +1,7 @@
 const path = require(`path`)
 const readingTime = require('reading-time');
 const { markdownToTxt } = require('markdown-to-txt');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -69,9 +70,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 }
 exports.onCreateNode = async options => {
-  return Promise.all([
+  Promise.all([
     addReadTime(options)
   ]);
+  
 };
 
 const addReadTime = async ({node, loadNodeContent, actions}) => {
