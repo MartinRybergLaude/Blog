@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
   dotenv.config()
 }
 
@@ -94,6 +94,72 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allContentfulBlogPost } }) => {
+              return allContentfulBlogPost.edges.map(({node}) => {
+                return Object.assign({}, {
+                  title: node.title,
+                  description: node.description.description,
+                  author: node.author.name,
+                  date: node.publishDate,
+                  url: site.siteMetadata.siteUrl + "/blog/" + node.slug,
+                  guid: site.siteMetadata.siteUrl + "/blog/" + node.slug,
+                  custom_elements: [{"content:encoded": node.body.childMarkdownRemark.html}]
+                })
+              })
+            },
+            query: `
+              {
+                allContentfulBlogPost {
+                  edges {
+                    node {
+                      slug
+                      title
+                      description {
+                        description
+                      }
+                      author {
+                        name
+                        link
+                      }
+                      body {
+                        childMarkdownRemark {
+                          html
+                        }
+                      }
+                      publishDate
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Martin's RSS feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+          },
+        ],
+      },
+    },
   ]
 }
