@@ -5,10 +5,10 @@
   padding-bottom: 16px;
   overflow-x: hidden;
   .img {
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     margin-bottom: 32px;
     img {
-      border-radius: 12px;
+      border-radius: var(--border-radius);
     }
   }
   p {

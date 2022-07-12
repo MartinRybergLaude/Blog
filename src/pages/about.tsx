@@ -36,9 +36,11 @@ export default function Index() {
         curiousity and passion for learning about new technologies. The future
         has grand things in store!
       </p>
-      <Link to="/contact" className="btn">
-        Contact me
-      </Link>
+      <div>
+        <Link to="/contact" className="btn">
+          Contact me
+        </Link>
+      </div>
     </Layout>
   )
 }

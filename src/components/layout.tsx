@@ -41,7 +41,7 @@ function Layout(props: Props) {
       <div className="masterContainer">
         <Header activeTag={props.tag} />
         <h1 className={styles.title}>{props.title}</h1>
-        <main>{props.children}</main>
+        <main className="wrapper">{props.children}</main>
       </div>
       <Footer />
     </div>

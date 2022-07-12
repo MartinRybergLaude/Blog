@@ -1,3 +1,9 @@
 .title {
-  margin: 48px 0;
+  margin: 48px 32px;
+}
+
+@media (min-width: 600px) {
+  .title {
+    margin: 48px 48px;
+  }
 }

@@ -1,0 +1,14 @@
+
+.canvas {
+  animation: fadein 1s;
+}
+
+// Fade in keyframes
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
