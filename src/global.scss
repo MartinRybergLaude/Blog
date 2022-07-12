@@ -40,8 +40,8 @@
   --fontSize-5: 32px;
   --fontSize-6: 48px;
   --fontSize-7: 64px;
-  --color-primary: #1d7464;
-  --color-primary-rgb: 0, 153, 133;
+  --color-primary: #20768e;
+  --color-primary-rgb: 32, 118, 142;
   --color-text: #000000;
   --color-text-secondary: #3d3d4d;
   --color-text-light: #4b5561;
@@ -52,8 +52,8 @@
   --color-background: #f6f8f7;
 }
 [data-theme="dark"] {
-  --color-primary: #00ddbf;
-  --color-primary-rgb: 0, 221, 191;
+  --color-primary: #4fc5cd;
+  --color-primary-rgb: 79, 197, 205;
   --color-text: #ffffff;
   --color-text-secondary: #d8d8e7;
   --color-text-light: #a5b0c2;
@@ -347,7 +347,7 @@ a:focus {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   position: relative;
   border-radius: var(--border-radius);
-  background: linear-gradient(90deg, hsla(165, 89%, 31%, 1) 0%, rgb(141, 222, 201) 100%);
+  background: linear-gradient(180deg, hsla(0, 100%, 67%, 1) 0%, hsla(0, 100%, 89%, 1) 100%);
   margin-bottom: 32px;
   .btn-alt {
     display: block;
@@ -358,18 +358,18 @@ a:focus {
 .avatar-card-left {
   padding: var(--padding);
   width: 100%;
-  z-index: 999;
 }
 .avatar-card-right {
   position: relative;
-  height: 364px;
+  height: 400px;
   width: 100%;
 }
 .scene {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 400px;
+  height: 392px;
+  animation: fadin 1s;
 }
 .desc {
   font-weight: 600;
@@ -438,11 +438,13 @@ a:focus {
   .avatar-card {
     overflow: visible;
     -webkit-mask-image: none;
+    background: linear-gradient(90deg, hsla(0, 100%, 67%, 1) 0%, hsla(0, 100%, 89%, 1) 100%);
   }
   .avatar-card-left {
     width: 50%;
   }
   .avatar-card-right {
+    pointer-events: none;
     overflow: hidden;
     width: 68%;
     height: 150%;
@@ -462,5 +464,15 @@ a:focus {
   blockquote {
     padding: 0;
     margin-left: 0;
+  }
+}
+
+// Fade in animation with keyframes
+@keyframes fadin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
