@@ -1,8 +1,10 @@
 import { graphql, Link } from "gatsby"
-import * as React from "react"
+import React, { lazy } from "react"
 import CompactBlogItem from "../components/compactBlogItem"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+const AvatarCanvas = lazy(() => import("../components/avatarCanvas"))
 
 export default function Index({ data }) {
   const posts = data.allContentfulBlogPost.nodes
@@ -12,15 +14,21 @@ export default function Index({ data }) {
         title="Martin Ryberg Laude — Frontend Developer & Designer"
         isIndex
       />
-
-      <p className="desc">
-        I design & develop websites, and you're currently visiting my personal
-        website. Here you'll find my blog, prior work, and some relevant
-        information. Enjoy!
-      </p>
-      <Link to="/about" className="btn">
-        More about me
-      </Link>
+      <div className="full-width avatar-card">
+        <div className="avatar-card-left">
+          <p className="desc desc-alt">
+            I design & develop websites, and you're currently visiting my
+            personal website. Here you'll find my blog, prior work, and some
+            relevant information. Enjoy!
+          </p>
+          <Link to="/about" className="btn-alt">
+            More about me
+          </Link>
+        </div>
+        <div className="avatar-card-right">
+          <AvatarCanvas className="scene" />
+        </div>
+      </div>
       <h2>Latest posts</h2>
       <ol style={{ listStyleType: "none", margin: 0 }}>
         {posts.map(post => {
@@ -48,7 +56,7 @@ export default function Index({ data }) {
           <path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z" />
         </svg>
       </Link>
-      <div className="cloud">
+      <div className="cloud full-width">
         <h3 style={{ marginTop: 0 }}>Attention!</h3>
         <p>
           This website is new and currently under active development. Please

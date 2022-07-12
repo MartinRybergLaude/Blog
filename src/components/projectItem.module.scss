@@ -1,7 +1,7 @@
-$radius: 12px;
+
 .container {
   margin-bottom: 48px;
-  border-radius: $radius;
+  border-radius: var(--border-radius);
   overflow-x: hidden;
   h2 {
     font-size: var(--fontSize-3);
@@ -18,9 +18,9 @@ $radius: 12px;
 }
 .img {
   height: 144px;
-  border-radius: $radius;
+  border-radius: var(--border-radius);
   img {
-    border-radius: $radius;
+    border-radius: var(--border-radius);
   }
 }
 .link:hover {
@@ -29,7 +29,7 @@ $radius: 12px;
   }
   .img {
     opacity: 0.8;
-    border-radius: $radius;
+    border-radius: var(--border-radius);
   }
 }
 .liveLinkWrapper {
