@@ -50,6 +50,8 @@
   --color-heading-black: black;
   --color-light: #e6e6e6;
   --color-background: #f6f8f7;
+  --color-card-gradient-1: #ff5757;
+  --color-card-gradient-2: #ffc7c7;
 }
 [data-theme="dark"] {
   --color-primary: #4fc5cd;
@@ -62,6 +64,8 @@
   --color-heading-black: white;
   --color-light: #2e313a;
   --color-background: #1f242a;
+  --color-card-gradient-1: #d54f4f;
+  --color-card-gradient-2: #da927c;
 }
 
 /* HTML elements */
@@ -347,7 +351,7 @@ a:focus {
   -webkit-mask-image: -webkit-radial-gradient(white, black);
   position: relative;
   border-radius: var(--border-radius);
-  background: linear-gradient(180deg, hsla(0, 100%, 67%, 1) 0%, hsla(0, 100%, 89%, 1) 100%);
+  background: linear-gradient(180deg, var(--color-card-gradient-1) 0%, var(--color-card-gradient-2) 100%);
   margin-bottom: 32px;
   .btn-alt {
     display: block;
@@ -438,7 +442,7 @@ a:focus {
   .avatar-card {
     overflow: visible;
     -webkit-mask-image: none;
-    background: linear-gradient(90deg, hsla(0, 100%, 67%, 1) 0%, hsla(0, 100%, 89%, 1) 100%);
+    background: linear-gradient(90deg, var(--color-card-gradient-1), var(--color-card-gradient-2) 100%);
   }
   .avatar-card-left {
     width: 50%;
@@ -449,17 +453,6 @@ a:focus {
     position: absolute;
     bottom: 0;
     right: 0;
-  }
-  .scene {
-    transform: translateZ(0);
-    pointer-events: none;
-    overflow: hidden;
-    width: 130%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-bottom-right-radius: 32px;
-    height: 400px;
   }
 }
 @media (max-width: 42rem) {
