@@ -26,7 +26,7 @@ export default function Index({ data }) {
           </Link>
         </div>
         <div className="avatar-card-right">
-          <AvatarCanvas className="scene" />
+          <AvatarCanvas />
         </div>
       </div>
       <h2>Latest posts</h2>
