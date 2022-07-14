@@ -1,9 +1,11 @@
-import React from "react"
+import React, { Suspense } from "react"
 import { graphql, Link } from "gatsby"
-import Avatar from "../components/avatar"
 import CompactBlogItem from "../components/compactBlogItem"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ClientOnly from "../components/clientOnly"
+import Loading from "../components/loading"
+import AvatarCanvas from "../components/avatarCanvas"
 
 export default function Index({ data }) {
   const posts = data.allContentfulBlogPost.nodes
@@ -25,7 +27,11 @@ export default function Index({ data }) {
           </Link>
         </div>
         <div className="avatar-card-right">
-          <Avatar />
+          <ClientOnly>
+            <Suspense fallback={<Loading />}>
+              <AvatarCanvas />
+            </Suspense>
+          </ClientOnly>
         </div>
       </div>
       <h2>Latest posts</h2>
