@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import React, { Suspense, useEffect, useState } from "react"
-import Loading from "./Loading"
+import Loading from "./loading"
 import Model from "../models/Model"
 import * as styles from "./avatarCanvas.module.scss"
 
