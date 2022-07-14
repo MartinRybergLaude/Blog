@@ -1,19 +1,15 @@
 import { Canvas } from "@react-three/fiber"
-import React, { Suspense, useEffect, useState } from "react"
+import React, { Suspense } from "react"
 import Loading from "./loading"
 import Model from "../models/Model"
 import * as styles from "./avatarCanvas.module.scss"
 
 export default function AvatarCanvas() {
-  const [isMounted, setIsMounted] = useState(false)
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
+  const isSSR = typeof window === "undefined"
 
   return (
     <>
-      {isMounted && (
+      {!isSSR && (
         <Suspense fallback={<Loading />}>
           <div className={styles.scene}>
             <div className={styles.mover}>
