@@ -13,6 +13,7 @@ module.exports = {
       twitter: `martini_rl`,
     },
   },
+  flags: {     DEV_SSR: true   },
   plugins: [
     `gatsby-plugin-image`,
     {

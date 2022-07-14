@@ -1,10 +1,9 @@
+import React from "react"
 import { graphql, Link } from "gatsby"
-import React, { lazy } from "react"
+import Avatar from "../components/avatar"
 import CompactBlogItem from "../components/compactBlogItem"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-const AvatarCanvas = lazy(() => import("../components/avatarCanvas"))
 
 export default function Index({ data }) {
   const posts = data.allContentfulBlogPost.nodes
@@ -26,7 +25,7 @@ export default function Index({ data }) {
           </Link>
         </div>
         <div className="avatar-card-right">
-          <AvatarCanvas />
+          <Avatar />
         </div>
       </div>
       <h2>Latest posts</h2>
