@@ -37,6 +37,7 @@
     "react-helmet": "^6.1.0",
     "reading-time": "^1.5.0",
     "sass": "^1.53.0",
+    "sharp": "^0.30.7",
     "three": "^0.142.0"
   },
   "devDependencies": {
